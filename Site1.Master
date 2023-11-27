@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ExammenII.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        MENU<br />
+        <br />
+        <asp:GridView runat="server" ID="datagrid" PageSize="10" HorizontalAlign="Center"
+            CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header"
+            RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" />
+
+        <br />
+        <br />
+        <br />
+
+    </div>
+    <div class="auto-style1">
+        Codigo: <asp:TextBox ID="tcodigo" class="form-control" runat="server" OnTextChanged="tcodigo_TextChanged"></asp:TextBox>
+        Tipo: <asp:TextBox ID="tdescripcion" class="form-control" runat="server"></asp:TextBox>
+    </div>
+    <div class="container text-center">
+
+        <asp:Button ID="Button1" class="btn btn-outline-primary" runat="server" Text="Agregar" OnClick="Button1_Click" />
+        <asp:Button ID="Button2" class="btn btn-outline-secondary" runat="server" Text="Borrar" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" class="btn btn-outline-danger" Text="Modificar" OnClick="Button3_Click" Width="78px" />
+        <asp:Button ID="Bconsulta" runat="server" class="btn btn-outline-danger" Text="Consultar" OnClick="Bconsulta_Click" />
+        
+
+    </div>
+    </form>
+</body>
+</html>
